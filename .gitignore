@@ -1,0 +1,12 @@
+# IDEs
+.idea
+.vscode
+
+# python
+.venv
+
+# temp files
+*.swp
+
+# ass
+node_modules/
