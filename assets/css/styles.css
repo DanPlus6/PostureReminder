@@ -43,5 +43,15 @@ h1 {
     top: 10%;
     left: 5%;
     height: 80%;
-    width: 35%;
+    width: 23%;
+}
+
+#mainbar {
+    position: absolute;
+    background-color: #1f1f1f;
+    border-radius: 40px;
+    top: 10%;
+    left: 35%;
+    height: 80%;
+    width: 60%;  
 }
