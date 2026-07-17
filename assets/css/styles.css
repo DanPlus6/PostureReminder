@@ -29,3 +29,19 @@ h1 {
     padding: 0px;
     margin: 0px;
 }
+
+#interaction-area {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 65px);
+}
+
+#sidebar {
+    position: absolute;
+    background-color: #1f1f1f;
+    border-radius: 40px;
+    top: 10%;
+    left: 5%;
+    height: 80%;
+    width: 35%;
+}
