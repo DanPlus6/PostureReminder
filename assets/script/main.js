@@ -35,7 +35,14 @@ function createWindow() {
 
 // exit button
 ipcMain.on('EXIT', (event, isChecked) => { if (isChecked) app.quit(); });
-ipcMain.on('toggle', (event, isChecked) => {if (isChecked) console.log("Ooh you want to turn it on.");});
+ipcMain.on('TOGGLE', (event, isChecked) => {
+	let pth;
+	if (isChecked) pth = path.join(__dirname, "../img/icon_on.png");
+	else pth = path.join(__dirname, "../img/icon_off.png");
+	
+	win.setIcon(nativeImage.createFromPath(pth));
+	tray.setImage(pth);
+});
 
 // initialize electron and create window
 app.whenReady().then(createWindow);
