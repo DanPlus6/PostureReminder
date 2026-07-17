@@ -1,5 +1,5 @@
 'use strict';
-// Import required libraries
+// Import required modules
 const {app, ipcMain, BrowserWindow} = require('electron');
 const path = require('path');
 
@@ -7,17 +7,16 @@ const path = require('path');
 function createWindow() {
 	const win = new BrowserWindow({
 		width: 1280,
-		height:800,
+		height: 800,
 		titleBarStyle: 'hidden',
-		...(process.platform !== 'darwin' ? { titleBarOverlay: {
+		icon: path.join(__dirname, 'assets/img/icon.png'),
+		...(process.platform != 'darwin' ? { titleBarOverlay: {
 			color: '#2b2b2b',
 			symbolColor: '#FFFFFF',
 			height: 65,
-			icon: path.join(__dirname,'assets/img/icon.png')
 		} } : {})
 	});
 	win.loadFile('index.html');
-	win.setMenuBarVisibility(true);
 }
 
 // exit button
