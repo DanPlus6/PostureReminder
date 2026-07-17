@@ -7,17 +7,12 @@ function createWindow() {
 	const win = new BrowserWindow({
 		width: 1280,
 		height:800,
-		frame: false,
 		titleBarStyle: 'hidden',
-		titleBarOverlay: {
-			color: '#2b2b2b',       // The background color of the OS control area
+		...(process.platform !== 'darwin' ? { titleBarOverlay: {
+			color: '#2b2b2b',
 			symbolColor: '#FFFFFF',
 			height: 40
-		},
-		webPreferences: {
-		nodeIntegration: true,
-		contextIsolation: false
-		}
+		} } : {})
 	});
 	win.loadFile('index.html');
 	win.setMenuBarVisibility(true);

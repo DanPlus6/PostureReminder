@@ -5,9 +5,14 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
     background-color: #2b2b2b;
     -webkit-app-region: drag;
 }
+
 
 h1 {
     font-family: 'Iosevka Charon Mono', monospace;
