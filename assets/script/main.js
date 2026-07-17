@@ -38,18 +38,13 @@ ipcMain.on('EXIT', (event, isChecked) => { if (isChecked) app.quit(); });
 ipcMain.on('TOGGLE', (event, isChecked) => {
 	let pth;
 	if (isChecked) pth = path.join(__dirname, "../img/icon_on.png");
-	else pth = path.join(__dirname, "../img/icon_off.png");
 	
 	win.setIcon(nativeImage.createFromPath(pth));
 	tray.setImage(pth);
 });
 
 ipcMain.on('BROWSE', (event) => {
-	if (process.platform === 'win32') {
-		shell.openPath(app.getPath('home'));
-	} else {
-		shell.openPath(app.getPath('home'));
-	}
+	shell.openPath(app.getPath('home'));
 });
 
 // initialize electron and create window
