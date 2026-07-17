@@ -20,7 +20,11 @@ function createWindow() {
 			color: '#2b2b2b',
 			symbolColor: '#FFFFFF',
 			height: 65,
-		} } : {})
+		} } : {}),
+		webPreferences: {
+			nodeIntegration: true,
+			contextIsolation: false
+		}
 	});
 	// load html file for app
 	win.loadFile('index.html');
@@ -30,7 +34,8 @@ function createWindow() {
 }
 
 // exit button
-ipcMain.on('EXIT', () => { app.quit(); });
+ipcMain.on('EXIT', (event, isChecked) => { if (isChecked) app.quit(); });
+ipcMain.on('toggle', (event, isChecked) => {if (isChecked) console.log("Ooh you want to turn it on.");});
 
 // initialize electron and create window
 app.whenReady().then(createWindow);
