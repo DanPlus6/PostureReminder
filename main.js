@@ -9,7 +9,7 @@ function createWindow() {
     titleBarOverlay: {
         color: '#2b2b2b',       // The background color of the OS control area
         symbolColor: '#FFFFFF',
-        height: 45
+        height: 40
     },
     webPreferences: {
       nodeIntegration: true,
