@@ -15,7 +15,7 @@ function createWindow() {
 		width: 1280,
 		height: 800,
 		titleBarStyle: 'hidden',
-		icon: nativeImage.createFromPath(path.join(__dirname, "../img/icon_off.png")),
+		icon: nativeImage.createFromPath(path.join(__dirname, "../img/global/icon_off.png")),
 		...(process.platform != 'darwin' ? { titleBarOverlay: {
 			color: '#2b2b2b',
 			symbolColor: '#FFFFFF',
@@ -27,17 +27,17 @@ function createWindow() {
 		}
 	});
 	// load html file for app
-	win.loadFile('index.html');
+	win.loadFile('images.html');
 
 	// create system tray icon
-	tray = new Tray(path.join(__dirname, "../img/icon_off.png"));
+	tray = new Tray(path.join(__dirname, "../img/global/icon_off.png"));
 }
 
 // exit button
 ipcMain.on('TOGGLE', (event, isChecked) => {
 	let pth;
-	if (isChecked) pth = path.join(__dirname, "../img/icon_on.png");
-	else pth = path.join(__dirname, "../img/icon_off.png");
+	if (isChecked) pth = path.join(__dirname, "../img/global/icon_on.png");
+	else pth = path.join(__dirname, "../img/global/icon_off.png");
 	
 	win.setIcon(nativeImage.createFromPath(pth));
 	tray.setImage(pth);
