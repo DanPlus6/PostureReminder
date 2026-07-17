@@ -1,5 +1,5 @@
-const {ipcRenderer} = require('electron');
+// const {ipcRenderer} = require('electron');
 
-document.getElementById('exit-button').addEventListener('click', () => {
-    ipcRenderer.send('EXIT');
-});
+// document.getElementById('exit-button').addEventListener('click', () => {
+//     ipcRenderer.send('EXIT');
+// });
