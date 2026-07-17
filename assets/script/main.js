@@ -1,6 +1,7 @@
 'use strict';
 // Import required libraries
 const {app, ipcMain, BrowserWindow} = require('electron');
+const path = require('path');
 
 /** Main callback to create the windows */
 function createWindow() {
@@ -11,7 +12,8 @@ function createWindow() {
 		...(process.platform !== 'darwin' ? { titleBarOverlay: {
 			color: '#2b2b2b',
 			symbolColor: '#FFFFFF',
-			height: 80
+			height: 65,
+			icon: path.join(__dirname,'assets/img/icon.png')
 		} } : {})
 	});
 	win.loadFile('index.html');
