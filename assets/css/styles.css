@@ -267,7 +267,7 @@ input:checked + .switch-slider:before {
     padding: 0;
 }
 
-.image-slot-remove svg {
+.image-slot-remove img {
     width: 100%;
     height: 100%;
 }
