@@ -1,6 +1,6 @@
 'use strict';
 // Import required modules
-const {app, ipcMain, BrowserWindow, nativeImage, Tray} = require('electron');
+const {app, ipcMain, BrowserWindow, nativeImage, Tray, shell} = require('electron');
 const path = require('path');
 
 /** @type {BrowserWindow} main window object */
@@ -42,6 +42,14 @@ ipcMain.on('TOGGLE', (event, isChecked) => {
 	
 	win.setIcon(nativeImage.createFromPath(pth));
 	tray.setImage(pth);
+});
+
+ipcMain.on('BROWSE', (event) => {
+	if (process.platform === 'win32') {
+		shell.openPath(app.getPath('home'));
+	} else {
+		shell.openPath(app.getPath('home'));
+	}
 });
 
 // initialize electron and create window
