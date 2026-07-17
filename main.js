@@ -6,7 +6,11 @@ function createWindow() {
     height:800,
     frame: false,
     titleBarStyle: 'hidden',
-    titleBarOverlay: true,
+    titleBarOverlay: {
+        color: '#2b2b2b',       // The background color of the OS control area
+        symbolColor: '#FFFFFF',
+        height: 45
+    },
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false

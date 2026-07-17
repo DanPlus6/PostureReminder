@@ -1,4 +1,18 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #181818;
+}
+
+header {
+    background-color: #2b2b2b;
+    -webkit-app-region: drag;
+}
+
 h1 {
     font-family: 'Iosevka Charon Mono', monospace;
     text-align: center;
+    color: #FFFFFF;
+    padding: 0px;
+    margin: 0px;
 }
