@@ -11,7 +11,7 @@ function createWindow() {
 		...(process.platform !== 'darwin' ? { titleBarOverlay: {
 			color: '#2b2b2b',
 			symbolColor: '#FFFFFF',
-			height: 40
+			height: 80
 		} } : {})
 	});
 	win.loadFile('index.html');
