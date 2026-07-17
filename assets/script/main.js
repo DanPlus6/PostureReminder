@@ -15,7 +15,7 @@ function createWindow() {
 		width: 1280,
 		height: 800,
 		titleBarStyle: 'hidden',
-		icon: nativeImage.createFromPath(path.join(__dirname, "../img/icon.png")),
+		icon: nativeImage.createFromPath(path.join(__dirname, "../img/icon_off.png")),
 		...(process.platform != 'darwin' ? { titleBarOverlay: {
 			color: '#2b2b2b',
 			symbolColor: '#FFFFFF',
@@ -30,7 +30,7 @@ function createWindow() {
 	win.loadFile('index.html');
 
 	// create system tray icon
-	tray = new Tray(path.join(__dirname, "../img/icon.png"));
+	tray = new Tray(path.join(__dirname, "../img/icon_off.png"));
 }
 
 // exit button
