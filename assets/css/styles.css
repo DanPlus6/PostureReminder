@@ -108,3 +108,166 @@ input:checked + .switch-slider:before {
     transform: translateX(20vh);
 }
 
+.nav-list {
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    width: 80%;
+    height: 68%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-height: 0;
+    padding: 0 24px;
+    border: none;
+    border-radius: 40px;
+    background-color: #2a2a2a;
+    color: #bebebe;
+    font-family: 'Iosevka Charon Mono', monospace;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.nav-button.active {
+    background-color: #2f2f2f;
+    color: #c2c2c2;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+}
+
+.nav-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-label {
+    line-height: 1;
+}
+
+.main-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.main-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-image-button {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: none;
+    background-color: transparent;
+    color: #c2c2c2;
+    font-family: 'Iosevka Charon Mono', monospace;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.add-image-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+}
+
+.add-image-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.browse-button {
+    border: 1px solid #2f2f2f;
+    border-radius: 24px;
+    background-color: #1f1f1f;
+    color: #c2c2c2;
+    font-family: 'Iosevka Charon Mono', monospace;
+    font-size: 1.3rem;
+    padding: 14px 40px;
+    cursor: pointer;
+}
+
+.main-panel-divider {
+    height: 1px;
+    background-color: #2a2a2a;
+    margin: 24px 0;
+    flex-shrink: 0;
+}
+
+.image-grid-scroll {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.image-grid-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.image-grid-scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.image-grid-scroll::-webkit-scrollbar-thumb {
+    background-color: #2f2f2f;
+    border-radius: 4px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.image-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.image-slot-frame {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    background-color: #2a2a2a;
+}
+
+.image-slot-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+    color: #555555;
+    cursor: pointer;
+    padding: 0;
+}
+
+.image-slot-remove svg {
+    width: 100%;
+    height: 100%;
+}
